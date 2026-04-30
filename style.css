@@ -1,93 +1,485 @@
 /* --- פונטים וכללי --- */
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600&family=Playfair+Display:wght@700&display=swap');
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body { font-family: 'Assistant', sans-serif; direction: rtl; background-color: #fdfbf7; color: #333; line-height: 1.6; }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-h1, h2, h3 { font-family: 'Playfair Display', serif; color: #2d3748; }
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Assistant', sans-serif;
+    direction: rtl;
+    background-color: #fdfbf7;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+    color: #2d3748;
+}
 
 /* כפתור WhatsApp */
-.whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 2000; box-shadow: 0 5px 15px rgba(0,0,0,0.2); transition: 0.3s; }
-.whatsapp-float:hover { transform: scale(1.1); }
-.wa-tooltip { position: absolute; right: 70px; background: white; padding: 5px 15px; border-radius: 5px; font-size: 0.8rem; box-shadow: 0 2px 10px rgba(0,0,0,0.1); white-space: nowrap; opacity: 0; transition: 0.3s; pointer-events: none; }
-.whatsapp-float:hover .wa-tooltip { opacity: 1; }
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #25d366;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+.wa-tooltip {
+    position: absolute;
+    right: 70px;
+    background: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    opacity: 0;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.whatsapp-float:hover .wa-tooltip {
+    opacity: 1;
+}
 
 /* --- Navbar --- */
-.navbar { display: flex; justify-content: space-between; align-items: center; padding: 10px 5%; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 1000; }
-.logo-img { height: 70px; width: auto; }
-.nav-links { display: flex; gap: 12px; }
-.nav-btn { text-decoration: none; color: #4a5568; padding: 10px 20px; border-radius: 8px; background: #f8f9fa; border: 1px solid #e2e8f0; transition: 0.3s; font-size: 0.95rem; font-weight: 600; }
-.nav-btn:hover { background: #e2e8f0; transform: translateY(-3px); }
-.contact-btn { background: #a3b18a; color: white !important; border: none; }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-img {
+    height: 70px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 12px;
+}
+
+.nav-btn {
+    text-decoration: none;
+    color: #4a5568;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: #f8f9fa;
+    border: 1px solid #e2e8f0;
+    transition: 0.3s;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.nav-btn:hover {
+    background: #e2e8f0;
+    transform: translateY(-3px);
+}
+
+.contact-btn {
+    background: #a3b18a;
+    color: white !important;
+    border: none;
+}
 
 /* --- אודות --- */
-.about-section { padding: 120px 8%; background: white; scroll-margin-top: 100px; }
-.about-container { display: flex; align-items: center; gap: 60px; max-width: 1150px; margin: 0 auto; }
-.profile-img { width: 100%; max-width: 240px; height: auto; border-radius: 20px; border: 8px solid #ffffff; box-shadow: 8px 8px 0px rgba(163, 177, 138, 0.2); object-fit: cover; }
-.credentials-badge { background: #f4f7f1; color: #a3b18a; padding: 8px 15px; border-radius: 50px; display: inline-block; margin-bottom: 25px; font-size: 0.95rem; font-weight: bold; }
-.specialties { list-style: none; padding: 0; margin-top: 20px; }
-.specialties li { margin-bottom: 12px; padding-right: 30px; position: relative; }
-.specialties li::before { content: "✓"; position: absolute; right: 0; color: #a3b18a; font-weight: bold; }
+.about-section {
+    padding: 120px 8%;
+    background: white;
+    scroll-margin-top: 100px;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.profile-img {
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+    border-radius: 20px;
+    border: 8px solid #ffffff;
+    box-shadow: 8px 8px 0px rgba(163, 177, 138, 0.2);
+    object-fit: cover;
+}
+
+.credentials-badge {
+    background: #f4f7f1;
+    color: #a3b18a;
+    padding: 8px 15px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+.specialties {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.specialties li {
+    margin-bottom: 12px;
+    padding-right: 30px;
+    position: relative;
+}
+
+.specialties li::before {
+    content: "✓";
+    position: absolute;
+    right: 0;
+    color: #a3b18a;
+    font-weight: bold;
+}
 
 /* --- הגישה הטיפולית --- */
-.vision-section { padding: 120px 8%; background: #f9faf8; scroll-margin-top: 100px; }
-.vision-container { max-width: 1100px; margin: 0 auto; }
-.section-tag { color: #a3b18a; font-weight: bold; display: block; margin-bottom: 10px; }
-.vision-header h2 { font-size: 2.5rem; margin-bottom: 30px; }
-.vision-grid { display: flex; gap: 50px; flex-wrap: wrap; }
-.vision-text { flex: 1.5; min-width: 300px; }
-.vision-belief-card { flex: 1; background: white; padding: 40px; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border-right: 5px solid #a3b18a; min-width: 300px; }
+.vision-section {
+    padding: 120px 8%;
+    background: #f9faf8;
+    scroll-margin-top: 100px;
+}
+
+.vision-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-tag {
+    color: #a3b18a;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.vision-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.vision-grid {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.vision-text {
+    flex: 1.5;
+    min-width: 300px;
+}
+
+.vision-belief-card {
+    flex: 1;
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    border-right: 5px solid #a3b18a;
+    min-width: 300px;
+}
 
 /* --- שירותים --- */
-.services-gallery { display: flex; justify-content: center; gap: 30px; padding: 100px 8%; flex-wrap: wrap; scroll-margin-top: 100px; }
-.service-card { background: white; width: 300px; height: 260px; padding: 30px; border-radius: 25px; text-align: center; position: relative; overflow: hidden; border: 1px solid #eee; transition: 0.4s; display: flex; flex-direction: column; justify-content: center; }
-.info-bubble { position: absolute; bottom: -100%; left: 0; width: 100%; height: 100%; background: rgba(163, 177, 138, 0.98); color: white; display: flex; align-items: center; padding: 25px; transition: 0.5s ease; }
-.service-card:hover .info-bubble { bottom: 0; }
-.card-icon-svg { width: 60px; height: 60px; margin: 0 auto 15px; }
+.services-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 100px 8%;
+    flex-wrap: wrap;
+    scroll-margin-top: 100px;
+}
+
+.service-card {
+    background: white;
+    width: 300px;
+    height: 260px;
+    padding: 30px;
+    border-radius: 25px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #eee;
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-bubble {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(163, 177, 138, 0.98);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    transition: 0.5s ease;
+}
+
+.service-card:hover .info-bubble {
+    bottom: 0;
+}
+
+.card-icon-svg {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px;
+}
 
 /* --- המלצות --- */
-.testimonials-section { padding: 100px 8%; background: #f4f7f1; scroll-margin-top: 100px; text-align: center; }
-.testimonials-grid { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; margin-top: 50px; }
-.testimonial-item { background: white; padding: 40px; border-radius: 20px; width: 450px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); font-style: italic; }
-.testimonial-item span { display: block; margin-top: 20px; font-weight: bold; color: #a3b18a; font-style: normal; }
+.testimonials-section {
+    padding: 100px 8%;
+    background: #f4f7f1;
+    scroll-margin-top: 100px;
+    text-align: center;
+}
+
+.testimonials-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.testimonial-item {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    width: 450px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    font-style: italic;
+}
+
+.testimonial-item span {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #a3b18a;
+    font-style: normal;
+}
 
 /* --- FAQ (תיקון עיצוב) --- */
-.faq-section { padding: 100px 8%; background: white; scroll-margin-top: 100px; }
-.faq-inner { max-width: 800px; margin: 0 auto; }
-.faq-item { border-bottom: 1px solid #eee; margin-bottom: 10px; }
-.faq-question { width: 100%; text-align: right; background: none; border: none; padding: 25px 0; font-size: 1.15rem; font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; color: #2d3748; }
-.faq-answer { max-height: 0; overflow: hidden; transition: 0.4s ease; background: #fdfbf7; }
-.faq-answer p { padding: 0 20px 20px 20px; color: #4a5568; }
-.faq-item.active .faq-answer { max-height: 300px; }
-.faq-item.active .faq-question { color: #a3b18a; }
+.faq-section {
+    padding: 100px 8%;
+    background: white;
+    scroll-margin-top: 100px;
+}
+
+.faq-inner {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: right;
+    background: none;
+    border: none;
+    padding: 25px 0;
+    font-size: 1.15rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    color: #2d3748;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s ease;
+    background: #fdfbf7;
+}
+
+.faq-answer p {
+    padding: 0 20px 20px 20px;
+    color: #4a5568;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 300px;
+}
+
+.faq-item.active .faq-question {
+    color: #a3b18a;
+}
 
 /* --- צור קשר --- */
-.contact-section { padding: 120px 8%; background: #f9fbfa; scroll-margin-top: 100px; }
-.contact-container { display: flex; gap: 50px; max-width: 1100px; margin: 0 auto; flex-wrap: wrap; align-items: center; }
-.contact-info-box { flex: 1; background: #a3b18a; color: white; padding: 50px; border-radius: 25px; min-width: 320px; }
-.contact-form-card { flex: 1.6; background: white; padding: 50px; border-radius: 25px; box-shadow: 0 15px 40px rgba(0,0,0,0.04); min-width: 350px; }
-.contact-form { display: flex; flex-direction: column; gap: 15px; }
-.input-group { display: flex; gap: 15px; }
-.contact-form input, .contact-form select, .contact-form textarea { width: 100%; padding: 15px; border: 1px solid #e2e8f0; background: #f8fafc; border-radius: 10px; }
-.submit-btn { background: #2d3748; color: white; border: none; padding: 18px; border-radius: 10px; cursor: pointer; font-weight: bold; width: 100%; transition: 0.3s; }
-.submit-btn:hover { background: #a3b18a; transform: translateY(-3px); }
+.contact-section {
+    padding: 120px 8%;
+    background: #f9fbfa;
+    scroll-margin-top: 100px;
+}
+
+.contact-container {
+    display: flex;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.contact-info-box {
+    flex: 1;
+    background: #a3b18a;
+    color: white;
+    padding: 50px;
+    border-radius: 25px;
+    min-width: 320px;
+}
+
+.contact-form-card {
+    flex: 1.6;
+    background: white;
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.04);
+    min-width: 350px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    display: flex;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #e2e8f0;
+    background: #f8fafc;
+    border-radius: 10px;
+}
+
+.submit-btn {
+    background: #2d3748;
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #a3b18a;
+    transform: translateY(-3px);
+}
 
 /* --- קופות חולים --- */
-.hmo-logos-section { margin-top: 80px; text-align: center; }
-.hmo-logos-grid { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; align-items: center; }
-.hmo-logo { height: 55px; width: auto; object-fit: contain; }
+.hmo-logos-section {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.hmo-logos-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.hmo-logo {
+    height: 55px;
+    width: auto;
+    object-fit: contain;
+}
 
 /* --- Footer --- */
-.site-footer { background: #2d3748; color: white; padding: 50px 8%; text-align: center; }
-.developer-info { font-size: 0.85rem; margin-top: 15px; opacity: 0.7; }
+.site-footer {
+    background: #2d3748;
+    color: white;
+    padding: 50px 8%;
+    text-align: center;
+}
+
+.developer-info {
+    font-size: 0.85rem;
+    margin-top: 15px;
+    opacity: 0.7;
+}
 
 /* --- אנימציות --- */
-.animate-on-scroll { opacity: 0; transform: translateY(30px); transition: 0.8s ease-out; }
-.animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.8s ease-out;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 @media (max-width: 768px) {
-    .input-group, .contact-container, .about-container, .vision-grid { flex-direction: column; }
-    .nav-links { width: 100%; justify-content: center; flex-wrap: wrap; }
-    .testimonial-item { width: 100%; }
+
+    .input-group,
+    .contact-container,
+    .about-container,
+    .vision-grid {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .testimonial-item {
+        width: 100%;
+    }
 }
