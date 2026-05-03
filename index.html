@@ -38,6 +38,7 @@
             <a href="#" class="nav-btn">דף הבית</a>
             <a href="#vision" class="nav-btn">הגישה שלי</a>
             <a href="#services" class="nav-btn">תחומי טיפול</a>
+            <a href="#certificates" class="nav-btn">הסמכות</a>
             <a href="#testimonials" class="nav-btn">המלצות</a>
             <a href="#faq" class="nav-btn">שאלות נפוצות</a>
             <a href="#contact" class="nav-btn contact-btn">צרו קשר</a>
@@ -171,6 +172,37 @@
         </div>
     </section>
 
+
+    <section id="certificates" class="certificates-section animate-on-scroll">
+  <div class="certificates-header">
+    <h2>הסמכות אקדמיות ומקצועיות</h2>
+    <p>השכלה מתמדת ופיקוח מקצועי הם הבסיס לטיפול איכותי, בטוח ואחראי.</p>
+  </div>
+  
+  <div class="certificates-container">
+    <!-- תעודה 1 -->
+    <div class="diploma-card">
+      <img src="images/diploma1.jpg" alt="תעודת הסמכה 1 - חיים דביר">
+      <h4>תעודת B.A בפסיכולוגיה  </h4>
+    </div>
+    
+    <!-- תעודה 2 -->
+    <div class="diploma-card">
+      <img src="images/diploma2.jpg" alt="תעודת הסמכה 2 - חיים דביר">
+      <h4>תעודת הסמכה מטפל ב C.B.T</h4>
+    </div>
+  </div>
+
+  <!-- כרטיסיית חברות באגודה -->
+  <div class="association-box">
+    <h3>חברות באגודה המקצועית</h3>
+    <p>אני חבר מן המניין באגודת היועצים והמטפלים. החברות באגודה מותנית בעמידה בסטנדרטים מקצועיים, אקדמיים ואתיים מחמירים, ומבטיחה למטופלים טיפול בסטנדרט הגבוה ביותר.</p>
+    <a href="https://acft.co.il/teachers/347/single_agent/" target="_blank" rel="noopener noreferrer" class="association-btn">
+      לצפייה בפרופיל האישי באתר האגודה 🔗
+    </a>
+  </div>
+</section>
+
     <section id="testimonials" class="testimonials-section animate-on-scroll">
         <div class="container">
             <h2>מטופלים מספרים</h2>
@@ -225,36 +257,70 @@
         </div>
     </section>
 
-    <section id="contact" class="contact-section animate-on-scroll">
-        <div class="contact-header">
-            <h2>בואו נתחיל לדבר</h2>
+   <section id="contact" class="contact-section animate-on-scroll">
+  <div class="contact-header">
+    <h2>בואו נתחיל לדבר</h2>
+  </div>
+  <div class="contact-container">
+    
+    <!-- פרטי התקשרות -->
+    <div class="contact-info-box">
+      <h3>פרטי התקשרות</h3>
+      <!-- הוספתי עיצוב לקישורים כדי שיישארו לבנים ויפים על הרקע הירוק -->
+      <div class="info-detail">📞 <a href="tel:0548442877" style="color:white; text-decoration:none;">054-844-2877</a></div>
+      <div class="info-detail">📞 <a href="tel:0515403101" style="color:white; text-decoration:none;">051-540-3101</a></div>
+      <div class="info-detail">✉️ <a href="mailto:chaimd4@gmail.com" style="color:white; text-decoration:none;">chaimd4@gmail.com</a></div>
+    </div>
+    
+    <!-- כרטיסיית הטופס -->
+    <div class="contact-form-card">
+      <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        
+        <!-- שדות נסתרים חובה עבור Netlify (אבטחה וזיהוי) -->
+        <input type="hidden" name="form-name" value="contact" />
+        <p style="display: none;">
+          <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+        </p>
+
+        
+        
+        <!-- שורת שם פרטי ושם משפחה -->
+        <div class="input-group">
+          <input type="text" name="firstName" placeholder="שם פרטי" required>
+          <input type="text" name="lastName" placeholder="שם משפחה" required>
         </div>
-        <div class="contact-container">
-            <div class="contact-info-box">
-                <h3>פרטי התקשרות</h3>
-                <div class="info-detail">📞 <a href="tel:0548442877">054-844-2877</a></div>
-                <div class="info-detail">📞 <a href="tel:0515403101">051-540-3101</a></div>
-                <div class="info-detail">✉️ <a href="mailto:chaimd4@gmail.com">chaimd4@gmail.com</a></div>
-            </div>
-            <div class="contact-form-card">
-                <!-- שינוי ל-Netlify Forms -->
-                <form name="chaim-contact" method="POST" data-netlify="true" class="contact-form">
-                    <div class="input-group">
-                        <input type="text" name="name" placeholder="שם מלא" required>
-                        <input type="tel" name="phone" placeholder="טלפון" required>
-                    </div>
-                    <input type="email" name="email" placeholder="אימייל" required>
-                    <select name="topic" class="form-select" required>
-                        <option value="" disabled selected>סוג הטיפול</option>
-                        <option value="personal">אישי</option>
-                        <option value="couple">זוגי</option>
-                        <option value="child">לילד</option>
-                    </select>
-                    <textarea name="message" placeholder="איך אוכל לעזור?" rows="3"></textarea>
-                    <button type="submit" class="submit-btn">שליחת הודעה</button>
-                </form>
-            </div>
+        
+        <!-- שורת טלפון ומייל -->
+        <div class="input-group">
+          <input type="tel" name="phone" placeholder="מספר טלפון" required>
+          <input type="email" name="email" placeholder="כתובת דוא״ל" required>
         </div>
+
+        <!-- שורת בחירת סוג הטיפול -->
+        <div class="input-group">
+          <select class="form-select" name="treatment_type" required>
+            <option value="" disabled selected>באיזה סוג טיפול אתם מעוניינים?</option>
+            <option value="individual">טיפול יחיד</option>
+            <option value="couples">טיפול זוגי</option>
+            <option value="children_youth">טיפול בילדים ונוער</option>
+            <option value="other">אחר</option>
+          </select>
+        </div>
+
+        <!-- שורת טקסט חופשי -->
+        <div class="input-group">
+          <textarea name="message" placeholder="ספר/י לי בקצרה על סיבת הפנייה (ניתן להשאיר ריק)" rows="4"></textarea>
+        </div>
+        
+        <!-- אימות נגד בוטים של Netlify -->
+        <div data-netlify-recaptcha="true"></div>
+        
+        <button type="submit" class="submit-btn">שליחת הודעה מאובטחת 🔒</button>
+      </form>
+    </div>
+
+  </div>
+</section>
         
         <div class="hmo-logos-section">
             <h3 class="hmo-title">ניתן לקבל שירות בסבסוד כל קופות החולים</h3>
@@ -278,15 +344,7 @@
         </p>
     </footer>
 
-    <script>
-        document.querySelectorAll('.faq-question').forEach(btn => {
-            btn.addEventListener('click', () => btn.parentElement.classList.toggle('active'));
-        });
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
-    </script>
+<script src="script.js" defer></script>
 </body>
 
 </html>

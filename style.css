@@ -110,8 +110,26 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; color: #2d3748; }
 .faq-item.active .faq-question { color: #a3b18a; }
 
 /* --- צור קשר --- */
-.contact-section { padding: 100px 8%; background: #f9fbfa; scroll-margin-top: 100px; }
-.contact-header { text-align: center; margin-bottom: 40px; }
+/* עיצוב שדות הטופס - מתעלם משדות נסתרים */
+.contact-form input:not([type="hidden"]), 
+.contact-form textarea, 
+.contact-form select { 
+  padding: 15px; 
+  border: 1px solid #edf2f7; 
+  background: #f8fafc; 
+  border-radius: 10px; 
+  width: 100%; 
+  font-family: inherit; 
+  font-size: 1rem; 
+}
+
+/* איפוס מלא לשדות הנסתרים של Netlify */
+input[type="hidden"] {
+  display: none !important;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
 
 /* הקונטיינר רחב וגדול (1100px), הוסף align-items: flex-start כדי למנוע את "השטח המת" בירוק */
 .contact-container { display: flex; gap: 40px; max-width: 1100px; margin: 0 auto; flex-wrap: wrap; align-items: flex-start; }
@@ -149,3 +167,21 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; color: #2d3748; }
     /* הקטנת הלוגו המרחף בנייד שלא יסתיר טקסט */
     .hero-logo-floating { height: 70px; top: 10px; right: 10px; }
 }
+
+/* --- אזור תעודות והסמכות --- */
+.certificates-section { padding: 80px 8%; background-color: #f4f7f1; text-align: center; }
+.certificates-header { margin-bottom: 50px; }
+.certificates-header h2 { font-size: 2.2rem; color: #2d3748; }
+.certificates-header p { color: #4a5568; font-size: 1.1rem; }
+
+.certificates-container { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-bottom: 60px; }
+.diploma-card { background: white; padding: 20px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); width: 320px; transition: 0.3s; border: 1px solid #e2e8f0; }
+.diploma-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+.diploma-card img { width: 100%; height: auto; border-radius: 8px; border: 1px solid #edf2f7; margin-bottom: 15px; object-fit: contain; max-height: 250px; }
+.diploma-card h4 { color: #4a5568; margin: 0; font-size: 1.1rem; }
+
+.association-box { background: white; padding: 40px; border-radius: 20px; max-width: 700px; margin: 0 auto; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; display: flex; flex-direction: column; align-items: center; gap: 15px; }
+.association-box h3 { color: #a3b18a; margin: 0; font-size: 1.5rem; }
+.association-box p { color: #4a5568; margin: 0; line-height: 1.5; }
+.association-btn { display: inline-block; background-color: #2d3748; color: white; padding: 15px 30px; border-radius: 10px; text-decoration: none; font-weight: bold; transition: 0.3s; margin-top: 10px; }
+.association-btn:hover { background-color: #a3b18a; transform: translateY(-3px); }
